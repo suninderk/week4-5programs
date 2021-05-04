@@ -1,0 +1,14 @@
+package week4;
+
+import acm.program.ConsoleProgram;
+
+public class WordCount extends ConsoleProgram {
+	
+	public void run() {
+int character=0;
+int words=0;
+int lines=0;
+BufferedReader rd=new BufferedReader ();
+	}
+	
+}

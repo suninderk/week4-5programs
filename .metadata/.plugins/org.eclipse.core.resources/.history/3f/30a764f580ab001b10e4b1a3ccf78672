@@ -1,0 +1,52 @@
+package com.meritamerica.assignment1;
+
+import java.util.ArrayList;
+
+public class MeritBank{
+	static long mbAcNo  = 1;	
+	
+	static ArrayList<AccountHolder> mbAccHolderArray = new ArrayList<AccountHolder>();
+	static ArrayList<CDOffering> mbOfferingsArray = new ArrayList<CDOffering>();
+	//static ArrayList<totalBalances> mbTotalBalArray = new ArrayList<totalBalances>();
+	
+	static void addAccountHolder (AccountHolder accountHolder) {
+		mbAccHolderArray.add(accountHolder);
+	}
+	static AccountHolder[] getAccountHolders() {
+		return (AccountHolder[])mbAccHolderArray.toArray();
+	}
+	static CDOffering[] getCDOfferings(){
+		return (CDOffering[])mbOfferingsArray.toArray();
+	}
+	static CDOffering getBestCDOffering(double depositAmount) {
+		return mbOfferingsArray.get(0);
+	}
+	static CDOffering getSecondBestCDOffering(double depositAmount) {
+		return mbOfferingsArray.get(0);
+	}
+	@SuppressWarnings("null")
+	static void clearCDOfferings() {
+		mbAccHolderArray.clear();
+	}
+	public void setCDOfferings(CDOffering[] offerings) {
+		mbAccHolderArray.clear();
+		
+	}
+	static long getNextAccountNumber() {
+		mbAcNo = mbAcNo+1;
+		return mbAcNo;
+	}
+	static double totalBalances() {
+		double totalBalance = 0.00;
+		for (int i=0; i < mbAccHolderArray.size(); i++ ) {
+			
+			totalBalance=totalBalance+(mbAccHolderArray.get(i).getCombinedBalance());
+		}
+		return totalBalance;
+	}
+	static double futureValue(double PresentValue, double interestRate, int term) {
+		 return PresentValue*(Math.pow((1+interestRate), term));
+	}	
+}
+	
+

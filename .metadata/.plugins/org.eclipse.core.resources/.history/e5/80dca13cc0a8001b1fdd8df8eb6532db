@@ -1,0 +1,20 @@
+package com.meritamerica.assignment1;
+
+public class CDAccount {
+	CDOffering offering = new CDOffering(term, interestRate); 
+	double balance;
+
+		CDAccount(CDOffering offering, double balance){
+				this.offering = offering;
+				this.balance = balance;
+		}
+	
+		public double getBalance() {
+			return balance;
+		}
+		
+		public double getInterestRate() {
+			return offering.interestRate;
+		}
+}
+

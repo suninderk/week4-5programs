@@ -1,0 +1,38 @@
+package com.meritamerica.assignment1;
+
+public class MeritAmericaBankApp {
+public static void main(String[]args) {
+	CDOffering cd;
+	CDOffering[] offerings = new CDOffering[5];
+	cd = new CDOffering(1,0.0018);
+	offerings[0] = cd;
+	offerings[1] = new CDOffering(2,0.0019);
+	offerings[2] = new CDOffering(3,0.002);
+	offerings[3] = new CDOffering(5,0.0025);
+	offerings[4] = new CDOffering(10,0.0022);
+	MeritBank.setCDOfferings(offerings);
+System.out.println("Here 1");
+	AccountHolder ah1= new AccountHolder("John","Doe","James","123-456-7890");
+	System.out.println("Here 2");
+	ah1.addCheckingAccount(1000);
+	System.out.println("Here 3");
+	ah1.addSavingsAccount(10000);
+	System.out.println("Here 4");
+	ah1.addCheckingAccount(5000);
+	ah1.addSavingsAccount(50000);
+	
+	System.out.println("Here 5"+ah1.toString());
+	//AccountHolder	ac= new AccountHolder("John","James","Doe","123-45-6789",100,1000);
+	//System.out.println(ac.toString());
+	//ac.chk1.deposit(500);
+	//ac.sav1.withdraw(800);
+	//System.out.println(ac.chk1.toString());
+	//System.out.println(ac.sav1.toString());
+	
+	//AccountHolder	ah2= new AccountHolder("","","","");
+	//ac2.chk1.deposit(-500);
+	//ac2.sav1.withdraw(600);
+	//System.out.println(ac2.toString());
+	//AccountHolder	ah3= new AccountHolder("","","","");
+	}
+}

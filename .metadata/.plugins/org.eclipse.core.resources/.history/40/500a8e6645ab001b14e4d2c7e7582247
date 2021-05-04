@@ -1,0 +1,14 @@
+package week4;
+
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+
+public class ImageProcessing extends GraphicsProgram {
+	GOval drawCir =new GOval(150,150, 50 , 50 );
+  //flipVertical();
+ 
+}
+
+//private void flipVertical() {
+	//int[] array {]
+//}

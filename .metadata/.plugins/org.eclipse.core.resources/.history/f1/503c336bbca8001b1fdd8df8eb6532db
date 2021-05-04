@@ -1,0 +1,36 @@
+package com.meritamerica.assignment1;
+
+public class BankAccount {
+	private double Balance;
+	private double interestRate;
+	private long AccountNumber;
+	
+BankAccount(double Balance, double interestRate){
+	this. Balance = Balance;
+	this.interestRate = interestRate;
+}
+BankAccount(long AccountNumber, double Balance, double interestRate){
+	this. AccountNumber = AccountNumber;
+	this. Balance = Balance;
+	this.interestRate = interestRate;
+}
+public long getAccountNumber() {
+	return AccountNumber;
+}
+public double getBalance() {
+	return Balance;
+}
+public double getInterest() {
+	return interestRate;
+}
+boolean withdraw(double amount) {
+	if (amount> Balance){
+		return false;
+		}
+	else {
+	Balance=Balance-amount;
+	return true;
+	}
+}
+}
+

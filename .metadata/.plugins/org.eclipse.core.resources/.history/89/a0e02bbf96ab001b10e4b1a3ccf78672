@@ -1,0 +1,7 @@
+package com.meritamerica.assignment1;
+
+public class CheckingAccount extends BankAccount{ 
+	CheckingAccount(long actN, double openingBalance){
+		super(actN, openingBalance,0.0001);
+	}	
+}

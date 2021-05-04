@@ -1,0 +1,31 @@
+package week4;
+
+import java.awt.Color;
+
+import acm.graphics.GOval;
+import acm.graphics.GRect;
+import acm.program.GraphicsProgram;
+
+public class ImageProcessing extends GraphicsProgram {
+	
+	public void run(){
+		int x=570;
+		int y=200;
+		final double HEAD_WIDTH=500.0;
+		final double HEAD_HEIGHT=700.0;
+		GRect rect1=new GRect (x,y,HEAD_WIDTH,HEAD_HEIGHT);
+		rect1.setFilled(true);
+		rect1.setFillColor(Color.GRAY);
+		add(rect1);
+	GOval drawCir =new GOval(150,150, 50 , 50 );
+	rect1.setFilled(true);
+	rect1.setFillColor(Color.yellow);
+	add(drawCir);
+  //flipVertical();
+ 
+}
+}
+
+//private void flipVertical() {
+	//int[] array {]
+//}

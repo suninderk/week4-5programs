@@ -1,0 +1,133 @@
+package com.meritamerica.assignment1;
+import java.util.ArrayList;
+
+public class AccountHolder {
+	private String fN; 
+	private String mN;
+	private String lN;
+	private String ssnNumber;
+	//static double Rate= 0.0001;
+	CheckingAccount chk1;
+	SavingsAccount sav1;
+	CDAccount cd1;
+	
+	ArrayList<CheckingAccount> chkArray = new ArrayList<CheckingAccount>();
+	ArrayList<SavingsAccount> savArray = new ArrayList<SavingsAccount>();
+	ArrayList<CDAccount> cdArray = new ArrayList<CDAccount>();
+	
+	long accountN  = 1000;
+	double totalBalance;
+	AccountHolder(){
+		
+	}
+	AccountHolder(String firstName, String middleName, String lastName, String ssn){
+		this.fN = firstName;
+		this.mN=middleName;
+		this.lN=lastName;
+		this.ssnNumber=ssn;			
+	}
+
+	public String getFirstName(){
+		return fN;
+	}
+	void setFirstName(String firstName) {
+		this.fN=firstName;
+	}
+	public String getmiddleName(){
+		return mN;
+	}
+
+	void setMiddleName(String middleName) {
+		this.mN=middleName;
+	}
+
+	public String getLastName(){
+		return lN;
+	}
+	void setLastName(String lastName) {
+		this.lN=lastName;
+	}
+	public String getSSN(){
+		return ssnNumber;
+	}
+	void setSSN(String SSN) {
+		this.ssnNumber=SSN;
+	}
+	
+		CheckingAccount addCheckingAccount(double openingBalance) {
+			accountN = accountN+1;
+			chk1=new CheckingAccount(accountN, openingBalance);
+			chkArray.add(chk1);
+			return chk1;
+		}
+		
+		CheckingAccount addCheckingAccount(CheckingAccount checkingAccount) {
+			
+		}
+		
+		CheckingAccount[] getCheckingAccounts() {
+			return (CheckingAccount[])chkArray.toArray();	
+		}
+		int getNumberOfCheckingAccounts() {
+			return chkArray.size();
+		}	
+		double getCheckingBalance() {
+			return chk1.getBalance();
+		}
+		SavingsAccount addSavingsAccount(double openingBalance) {
+			accountN = accountN+1;
+			sav1=new SavingsAccount(accountN, openingBalance);
+			savArray.add(sav1);
+			return sav1;
+		}
+		SavingsAccount addSavingsAccount(SavingsAccount savingsAccount) {
+			
+		}
+		SavingsAccount[] getSavingsAccounts() {
+			return (SavingsAccount[])savArray.toArray();
+		}
+		int getNumberOfSavingsAccounts() {
+			return savArray.size();
+		}
+		double getSavingsBalance() {
+			return sav1.getBalance();
+		}
+		CDAccount addCDAccount(CDOffering offering,double openingBalance) {
+			accountN = accountN+1;
+			cd1=new CDAccount(offering,openingBalance);
+			cdArray.add(cd1);
+			return cd1;
+		}
+		CDAccount addCDAccount(CDAccount cdAccount) {
+			
+		}
+		CDAccount[]getCDAccounts(){
+			return (CDAccount[])cdArray.toArray();
+			
+		}
+		int getNumberOfCDAccounts() {
+			return cdArray.size();
+		}
+		double getCDBalance() {
+			return	cd1.getBalance();
+		}
+		double getCombinedBalance() {
+			return	totalBalance= chk1.getBalance()+sav1.getBalance()+cd1.getBalance();
+		
+			
+		}
+	}
+		
+		
+		/*public CheckingAccount getCheckingAccount() {
+			return chk1;
+		}
+		public SavingsAccount getSavingsAccount() {
+			return sav1;
+		}
+		@Override
+		public String toString() {
+			return "AccountHolder [fN=" + fN + ", mN=" + mN + ", lN=" + lN + ", ssnNumber=" + ssnNumber + ", c=" + c
+					+ ", s=" + s + "]";
+		}*/
+

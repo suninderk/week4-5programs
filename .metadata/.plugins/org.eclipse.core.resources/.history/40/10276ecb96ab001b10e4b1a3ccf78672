@@ -1,0 +1,8 @@
+package com.meritamerica.assignment1;
+
+public class SavingsAccount extends BankAccount{
+	SavingsAccount(long actN, double openingBalance){
+		super(actN, openingBalance,0.0001);	
+	}
+	
+}

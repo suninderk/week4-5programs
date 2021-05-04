@@ -1,0 +1,40 @@
+package week4;
+import java.io.*;
+import acm.program.ConsoleProgram;
+
+public class WordCount extends ConsoleProgram {
+	
+	public void run() {
+int character=0;
+int words=0;
+int lines=0;
+String prompt=null;
+String a=readLine (prompt);
+try {
+	BufferedReader rd=new BufferedReader (new FileReader(a));
+	} catch (FileNotFoundException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+	}
+
+//return rd;
+
+	
+while(a!= null)
+{
+    if(a.equals(""))
+    {
+        words++;
+    } else {
+        character += a.length();
+          
+    
+        
+    }
+}
+  
+System.out.println("Total word count = " + words);
+System.out.println("Total number of sentences = " + lines);
+System.out.println("Total number of characters = " + character);
+	}
+		

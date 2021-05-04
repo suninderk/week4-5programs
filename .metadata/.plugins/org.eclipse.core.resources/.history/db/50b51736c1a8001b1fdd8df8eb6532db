@@ -1,0 +1,33 @@
+package com.meritamerica.assignment1;
+
+public class CDAccount {
+	CDOffering offering; 
+	double balance;
+	private int t;
+	private double i;
+	//Date date;
+		CDAccount(CDOffering offering, double balance){
+				this.offering = offering;
+				this.balance = balance;
+				offering = new CDOffering(t, i);
+		}
+	
+		public double getBalance() {
+			return balance;
+		}
+		
+		public double getInterestRate() {
+			return offering.getInterestRate();
+		}
+		public int getTerm() {
+			return offering.getTerm();
+		}
+		public java.util.Date getStartDate(){
+		return null;
+		
+		}
+		public long getAccountNumber() {
+			return AccountNumber;
+		}
+}
+

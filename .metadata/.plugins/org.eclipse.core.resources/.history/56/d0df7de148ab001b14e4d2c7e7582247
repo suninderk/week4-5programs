@@ -1,0 +1,45 @@
+package week4;
+
+import java.awt.Color;
+import java.lang.reflect.Array;
+
+import acm.graphics.GOval;
+import acm.graphics.GRect;
+import acm.program.GraphicsProgram;
+
+public class ImageProcessing extends GraphicsProgram {
+	public void run(){
+		makeImage();
+		flipVertical();
+	}
+	public void makeImage(){
+		int x=670;
+		int y=100;
+		final double HEAD_WIDTH=300.0;
+		final double HEAD_HEIGHT=200.0;
+		final int EYE_RADIUS=37;
+		GRect rect1=new GRect (x,y,HEAD_WIDTH,HEAD_HEIGHT);
+		rect1.setFilled(true);
+		rect1.setFillColor(Color.GRAY);
+		add(rect1);
+	GOval drawCir =new GOval (x +( 0.25* HEAD_WIDTH)-EYE_RADIUS, y+( 0.25* HEAD_HEIGHT)-EYE_RADIUS,EYE_RADIUS*2, EYE_RADIUS*2);
+	drawCir.setFilled(true);
+	drawCir.setFillColor(Color.yellow);
+	add(drawCir);
+	}	
+  public void flipVertical() {
+  final int EYE_RADIUS=37;
+  int x=170;
+	int y=100;
+	final double HEAD_HEIGHT=200.0;
+	final double HEAD_WIDTH=300.0;
+	GRect rect2=new GRect (x,y,HEAD_WIDTH,HEAD_HEIGHT);
+	rect2.setFilled(true);
+	rect2.setFillColor(Color.GRAY);
+	add(rect2);
+	GOval drawCir1 =new GOval (x +( 0.25* HEAD_WIDTH)-EYE_RADIUS, y+( 0.25* HEAD_HEIGHT)-EYE_RADIUS,EYE_RADIUS*2, EYE_RADIUS*2);
+	drawCir1.setFilled(true);
+	drawCir1.setFillColor(Color.yellow);
+add(drawCir1);
+	}
+}

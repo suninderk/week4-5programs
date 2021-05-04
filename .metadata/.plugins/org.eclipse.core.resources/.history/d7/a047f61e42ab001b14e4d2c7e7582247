@@ -1,0 +1,28 @@
+package week4;
+
+import acm.program.ConsoleProgram;
+//import acm.program.*;
+import java.util.*;
+public class UniqueNames extends ConsoleProgram {
+	
+	public void run() {
+		ArrayList<String> names = new ArrayList<String>();
+while (true) {
+	String name=readLine("Enter name : ");
+	if (name.equals("")) {
+		break;
+		}
+	if(!names.contains(name)) {
+	 names.add(name);
+		}
+	
+	}
+	for(int i=0; i<(names.size()); i++) {	 
+		System.out.println(names.get(i));
+		}
+	
+	}
+}
+
+	
+

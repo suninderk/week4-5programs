@@ -1,0 +1,12 @@
+package com.meritamerica.assignment1;
+
+public class CheckingAccount extends BankAccount{
+	
+	private double balance;
+	private static double rate = 0.0001;
+ 
+	CheckingAccount(double openingBalance){
+		super(openingBalance,rate);
+		this.balance= openingBalance;
+	}	
+}
